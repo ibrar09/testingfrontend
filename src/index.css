@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /*
+    Tailwind automatically generates a CSS variable for the 'sans' stack.
+    This ensures all elements inherit the new Helvetica stack.
+  */
+  @apply font-sans;
+}
+/* Hide scrollbar for all browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Hide scrollbar for the Swiper container on all screens */
+.swiper {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.swiper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Optional: Smooth transition for images */
+.swiper-slide img {
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect on cards */
+.hero-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
